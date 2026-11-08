@@ -1,0 +1,42 @@
+package br.ufpb.livro;
+
+public class Livro {
+    private String titulo;
+    private int paginas;
+    private double preco;
+
+    public Livro (String titulo, int paginas, double preco) {
+        this.titulo = titulo;
+        this.paginas = paginas;
+        this.preco = preco;
+    }
+    public Livro () {
+    }
+
+    public String getTitulo(){
+        return this.titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public int getPaginas(){
+        return this.paginas;
+    }
+    public void setPaginas(int paginas){
+        this.paginas = paginas;
+    }
+    public double getPreco(){
+        return this.preco;
+    }
+    public void setPreco(double preco){
+        this.preco = preco;
+    }
+    public String toString() {
+        return "Livro: " + this.titulo + " |  Páginas: " + this.paginas + " |  Preço: R$" + this.preco;
+    }
+
+    public static void main(String [] args) {
+        Livro meuLivro = new Livro("Java para iniciantes", 300, 89.90);
+        System.out.println(meuLivro);
+    }
+}
